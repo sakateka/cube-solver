@@ -1,5 +1,8 @@
 # 🎯 Cube Solver
 
+<img width="146" height="304" alt="Untitled" src="https://github.com/user-attachments/assets/84254c71-c5ad-4181-9450-17a33075be12" />
+
+
 A cross-platform 3D Rubik's Cube solver built with **Bevy** and **Rust**. Experience the magic of solving a 3x3x3 cube with beautiful 3D graphics, intuitive touch controls, and a powerful solving engine.
 
 ## 🏗️ Architecture Overview
