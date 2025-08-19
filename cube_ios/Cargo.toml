@@ -1,0 +1,31 @@
+[package]
+name = "cube_ios"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+cube_solver = { path = "../cube_solver", features = ["ios"] }
+oslog = "0.2"
+
+bevy = { workspace = true }
+log = { workspace = true }
+
+# iOS build targets
+[package.metadata.cargo-bundle]
+name = "Cube Solver"
+identifier = "com.example.cube-solver"
+version = "1.0.0"
+category = "Games"
+build_targets = ["aarch64-apple-ios", "x86_64-apple-ios"]
+
+# iOS bundle configuration
+[package.metadata.bundle]
+name = "Cube Solver"
+identifier = "com.example.cube-solver"
+version = "1.0.0"
+icon = []
+copyright = ""
+category = "Games"

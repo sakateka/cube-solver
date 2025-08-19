@@ -1,0 +1,18 @@
+[package]
+name = "cube_solver"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = ["pc"]
+pc = ["winit"]
+android = ["bevy/android_shared_stdcxx"]
+ios = []
+
+[dependencies]
+bevy = { workspace = true }
+log = { workspace = true }
+min2phase = "0.2.4"
+
+# Platform-specific dependencies
+winit = { version = "0.30", optional = true }

@@ -1,0 +1,28 @@
+[package]
+name = "cube_android"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+cube_solver = { path = "../cube_solver", features = ["android"] }
+android-activity = { version = "0.6", features = ["native-activity"] }
+android_logger = "0.15"
+
+bevy = { workspace = true }
+log = { workspace = true }
+
+# Android APK configuration for cargo-apk
+[package.metadata.android]
+package = "com.example.cube_solver"
+build_targets = ["aarch64-linux-android", "x86_64-linux-android"]
+
+[package.metadata.android.application]
+theme = "@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
+hasCode = false
+
+# Include assets in the APK
+[[package.metadata.android.assets]]
+path = "assets/"

@@ -1,0 +1,21 @@
+[env]
+# Set iOS SDK environment variables
+IPHONEOS_DEPLOYMENT_TARGET = { value = "13.0", relative = false }
+
+# Target-specific configurations for iOS
+[target.aarch64-apple-ios]
+linker = "clang"
+ar = "ar"
+
+[target.x86_64-apple-ios]
+linker = "clang"
+ar = "ar"
+
+# iOS simulator targets
+[target.aarch64-apple-ios-sim]
+linker = "clang"
+ar = "ar"
+
+[target.x86_64-apple-ios-sim]
+linker = "clang"
+ar = "ar"

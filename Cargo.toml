@@ -1,0 +1,26 @@
+[workspace]
+members = [
+    "cube_solver",
+    "cube_android",
+    "cube_ios"
+]
+resolver = "2"
+
+[workspace.dependencies]
+log = "0.4"
+bevy = { version = "0.15", default-features = false, features = [
+    # Core features for both platforms
+    "bevy_core_pipeline",
+    "bevy_render", 
+    "bevy_asset",
+    "bevy_winit",
+    "bevy_window",
+    
+    # Real 3D rendering with PBR
+    "bevy_pbr",
+    "tonemapping_luts",
+    
+    # Text rendering for labels
+    "bevy_text",
+    "bevy_ui",
+] }
